@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Animations</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 50px;
+        }
+        .typing {
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid black;
+            width: 0;
+            animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 250px; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #2ecc71;
+        }
+        .button:active {
+            transform: scale(0.9);
+        }
+        .wave {
+            width: 100px;
+            height: 100px;
+            background: purple;
+            margin: 50px auto;
+            border-radius: 50%;
+            animation: wave 2s infinite alternate;
+        }
+        @keyframes wave {
+            from { transform: translateX(-50px) rotate(0deg); }
+            to { transform: translateX(50px) rotate(360deg); }
+        }
+        .flip {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            margin: 50px auto;
+            animation: flip 2s infinite;
+        }
+        @keyframes flip {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        .pulse {
+            width: 100px;
+            height: 100px;
+            background: cyan;
+            margin: 50px auto;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="typing">@tursunovv_756 follow</div>
+    <button class="button">obuna bo'l!</button>
+    <div class="wave"></div>
+    <div class="flip"></div>
+    <div class="pulse"></div>
+</body>
+</html>
